@@ -1,5 +1,9 @@
 @import './pico.min.css';
 
+input:not([type=checkbox], [type=radio], [type=range], [type=file])[type=search] {
+  border-radius: var(--border-radius);
+}
+
 /* Indigo Light scheme (Default) */
 /* Can be forced with data-theme="light" */
 [data-theme="light"],

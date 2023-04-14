@@ -28,7 +28,7 @@ async function search() {
         <option value=2>America</option>
         <option value=3>Global</option>
       </select>
-      <input v-model="pkg_name" @keyup.enter="search" type="text" placeholder="请输入包名，如: glibc" />
+      <input v-model="pkg_name" @keyup.enter="search" type="search" placeholder="请输入包名，如: glibc" />
       <button @click="search">搜索</button>
     </div>
     <progress v-if="isLoading"></progress>
