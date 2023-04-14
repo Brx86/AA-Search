@@ -4,13 +4,13 @@ const base_api = `${window.location.href}api`,
   pkg_name = ref(""),
   mirror = ref(0),
   result = ref(0),
-  loading = ref(0)
+  isLoading = ref(0)
 async function search() {
-  loading.value = 1
+  isLoading.value = 1
   const api_url = `${base_api}?p=${pkg_name.value}&m=${mirror.value}`
   const response = await fetch(api_url)
   const r = await response.json()
-  loading.value = 0
+  isLoading.value = 0
   result.value = r.data
 }
 </script>
@@ -31,7 +31,7 @@ async function search() {
       <input v-model="pkg_name" @keyup.enter="search" type="text" placeholder="请输入包名，如: glibc" />
       <button @click="search">搜索</button>
     </div>
-    <progress v-if="loading"></progress>
+    <progress v-if="isLoading"></progress>
     <div v-if="result">
       <table>
         <thead>
@@ -66,11 +66,11 @@ main>div {
 }
 
 select {
-  width: 30%;
+  width: 20%;
 }
 
 button {
-  margin-left: 10px;
+  white-space: nowrap;
   width: 30%;
 }
 </style>
