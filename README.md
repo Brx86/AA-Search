@@ -18,3 +18,13 @@ yarn
 yarn build
 uvicorn app:app --port=7777
 ```
+
+## Run on release
+
+```bash
+mkdir aa-search && cd aa-search
+wget https://github.com/Brx86/AA-Search/releases/download/v0.1/webapp-v0.1.tar.xz
+tar xf webapp-v0.1.tar.xz
+pip install uvicorn fastapi httpx
+uvicorn app:app --port=7777
+```
