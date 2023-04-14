@@ -4,13 +4,13 @@ const base_api = `${window.location.href}api`,
   pkg_name = ref(""),
   mirror = ref(0),
   result = ref(0),
-  isLoading = ref(0)
+  isLoading = ref(false)
 async function search() {
-  isLoading.value = 1
+  isLoading.value = true
   const api_url = `${base_api}?p=${pkg_name.value}&m=${mirror.value}`
   const response = await fetch(api_url)
   const r = await response.json()
-  isLoading.value = 0
+  isLoading.value = false
   result.value = r.data
 }
 </script>
@@ -29,9 +29,8 @@ async function search() {
         <option value=3>Global</option>
       </select>
       <input v-model="pkg_name" @keyup.enter="search" type="search" placeholder="请输入包名，如: glibc" />
-      <button @click="search">搜索</button>
+      <button @click="search" :aria-busy="isLoading">{{ isLoading ? "" : "搜索" }}</button>
     </div>
-    <progress v-if="isLoading"></progress>
     <div v-if="result">
       <table>
         <thead>
