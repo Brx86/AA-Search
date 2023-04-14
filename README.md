@@ -1,6 +1,8 @@
 # AA-Search
 
-Arch Linux Archive Search
+Arch Linux Archive Search.
+
+Powered by [Vue3](https://cn.vuejs.org/) and [Pico](https://picocss.com/)
 
 ## Demo
 
