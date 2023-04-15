@@ -8,7 +8,7 @@ Powered by [Vue3](https://cn.vuejs.org/) and [Pico](https://picocss.com/)
 
 [https://archive.aya1.pro/](https://archive.aya1.pro/)
 
-![图片](https://user-images.githubusercontent.com/44391900/232077089-a3394935-c89a-49e4-a172-ed007aed5dfe.png)
+![截图](https://user-images.githubusercontent.com/44391900/232202562-95238c66-4ff1-4034-810e-bcb92c57be5d.png)
 
 ## Build and run
 
