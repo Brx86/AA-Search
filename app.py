@@ -1,4 +1,5 @@
 import re, time
+from asyncio import sleep
 from httpx import AsyncClient
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
@@ -43,9 +44,11 @@ async def match_package(m, pkg_name):
 
 @app.get("/api")
 async def pkg_history(p: str, m: int = 0):
+    if not p:
+        await sleep(1)
+        return JSONResponse({"status": 404, "data": []})
     result = await match_package(m, p)
-    status = 200 if result else 404
-    return JSONResponse({"status": status, "data": result})
+    return JSONResponse({"status": 200 if result else 404, "data": result})
 
 
 @app.get("/")
