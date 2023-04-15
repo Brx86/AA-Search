@@ -2,7 +2,7 @@
 
 Arch Linux Archive Search.
 
-Powered by [Vue3](https://cn.vuejs.org/) and [Pico](https://picocss.com/)
+Powered by [Vue3](https://cn.vuejs.org/) , [Pico](https://picocss.com/) and [Fastapi](https://fastapi.tiangolo.com/)
 
 ## Demo
 
