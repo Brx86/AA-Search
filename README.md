@@ -25,8 +25,8 @@ uvicorn app:app --port=7777
 
 ```bash
 mkdir aa-search && cd aa-search
-wget https://github.com/Brx86/AA-Search/releases/download/v0.1/webapp-v0.1.tar.xz
-tar xf webapp-v0.1.tar.xz
+wget https://github.com/Brx86/AA-Search/releases/download/v0.2/aa-search-v0.2.tar.xz
+tar xf aa-search-v0.2.tar.xz
 pip install uvicorn fastapi httpx
 uvicorn app:app --port=7777
 ```
