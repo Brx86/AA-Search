@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-const base_api = `${window.location.href}api`,
+const base_api = `https://archive-api.aya1.eu.org/api`,
   pkg_name = ref(""),
   mirror = ref(0),
   result = ref(0),
@@ -9,9 +9,9 @@ async function search() {
   isLoading.value = true
   const api_url = `${base_api}?p=${pkg_name.value}&m=${mirror.value}`
   const response = await fetch(api_url)
-  const r = await response.json()
+  const data = await response.json()
   isLoading.value = false
-  result.value = r.data
+  result.value = data
 }
 </script>
 
