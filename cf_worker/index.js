@@ -35,7 +35,7 @@ async function match_package(mirror, pkg_name) {
         history_dict[date.getTime()] = [version, size, fmt_time, url]
     })
     const keys = Object.keys(history_dict)
-    keys.sort()
+    keys.sort().reverse()
     return keys.map(key => history_dict[key])
 }
 
