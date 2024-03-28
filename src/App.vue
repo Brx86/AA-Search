@@ -5,6 +5,12 @@ const base_api = `https://archive-api.aya1.de/api`,
   mirror = ref(0),
   result = ref(0),
   isLoading = ref(false)
+if (window.location.search.length > 0) {
+  let url_params = new URLSearchParams(window.location.search)
+  let params = Object.fromEntries(url_params.entries())
+  pkg_name.value = params.p || ''
+  search()
+}
 async function search() {
   isLoading.value = true
   const api_url = `${base_api}?p=${pkg_name.value}&m=${mirror.value}`
