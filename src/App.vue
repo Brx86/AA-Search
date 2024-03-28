@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-const base_api = `https://archive-api.aya1.eu.org/api`,
+const base_api = `https://archive-api.aya1.de/api`,
   pkg_name = ref(""),
   mirror = ref(0),
   result = ref(0),
